@@ -1,0 +1,138 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+ --Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-rayish-blue: hsl(211, 68%, 94%);
+--Light-grayish-blue: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
+--Red: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+/* styling the header */
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+main{
+    width: 1000px;
+    height: 100%;
+
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading p{
+    margin-left: 10px;
+    background: var(--Blue);
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+/* section notification */
+.persons{
+    display: flex;
+    align-items: center;
+}
+.person-profile{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+.persons-notifications{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+article{
+   
+    padding: 20px;
+    border-radius: 8px;
+}
+article span{
+    color: var(--Dark-grayish-blue);
+}
+a{
+    color: var(--Very-dark-blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover{
+    cursor: pointer;
+    color: Blue;
+}
+.persons-name{
+    font-weight: bolder;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.span-dot{
+    display: flex;
+}
+.online-dot{
+    background: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.unread{
+    background: var(--Very-light-grayish-blue);
+}
+
+.unread .user-activity::after{
+    content: "";
+    background: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+
+}
+.mark-all{
+    color: blue;
+    cursor: pointer;
+}
+
+.message{
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+@media  (max-width: 500px){
+    main{
+        width: 500px;
+        height: 100%;
+    }
+}
